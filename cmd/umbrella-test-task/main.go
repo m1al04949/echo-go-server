@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/m1al04949/echo-go-server/internal/pkg/app"
+	"echo-go-server/internal/pkg/app"
 )
 
 func main() {
@@ -12,7 +12,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	err := a.Run()
+	err = a.Run()
 	if err != nil {
 		log.Fatal(err)
 	}

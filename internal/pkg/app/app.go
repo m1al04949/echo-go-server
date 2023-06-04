@@ -3,11 +3,12 @@ package app
 import (
 	"fmt"
 	"log"
-	"test_task/echo-go-server/internal/app/mw"
+
+	"echo-go-server/internal/app/endpoint"
+	"echo-go-server/internal/app/mw"
+	"echo-go-server/internal/app/service"
 
 	"github.com/labstack/echo/v4"
-	"github.com/m1al04949/echo-go-server/internal/app/endpoint"
-	"github.com/m1al04949/echo-go-server/internal/app/service"
 )
 
 type App struct {
@@ -23,7 +24,7 @@ func New() (*App, error) {
 
 	a.e = endpoint.New(a.s)
 
-	a.echo := echo.New()
+	a.echo = echo.New()
 
 	a.echo.Use(mw.RoleCheck)
 
