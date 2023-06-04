@@ -21,7 +21,7 @@ func New(s Service) *Endpoint {
 	}
 }
 
-func (*Endpoint) Status(ctx echo.Context) error {
+func (e *Endpoint) Status(ctx echo.Context) error {
 	d := e.s.DaysLeft()
 
 	s := fmt.Sprintf("Days Left: %d", d)

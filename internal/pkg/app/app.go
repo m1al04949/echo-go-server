@@ -3,6 +3,11 @@ package app
 import (
 	"fmt"
 	"log"
+	"test_task/echo-go-server/internal/app/mw"
+
+	"github.com/labstack/echo/v4"
+	"github.com/m1al04949/echo-go-server/internal/app/endpoint"
+	"github.com/m1al04949/echo-go-server/internal/app/service"
 )
 
 type App struct {
